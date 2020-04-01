@@ -16,5 +16,8 @@
         "karma-coverage-istanbul-reporter": "2.1.1",
         "karma-jasmine": "*",
         "karma-jasmine-html": "github:jehon/jasmine-webcomponents"
+    },
+    "scripts": {
+        "test": "true"
     }
 }
