@@ -1,0 +1,20 @@
+{
+    "name": "css-inherit",
+    "private": true,
+    "version": "1.0.0",
+    "description": "Inherit from parent into shadow DOM",
+    "repository": "https://github.com/jehon/css-inherit",
+    "license": "MIT",
+    "devDependencies": {
+        "jasmine": "3.5.0",
+        "jasmine-core": "*",
+        "jasmine-webcomponents": "github:jehon/jasmine-webcomponents",
+        "karma": "*",
+        "karma-chrome-launcher": "*",
+        "karma-coverage": "*",
+        "karma-coverage-istanbul-instrumenter": "1.0.2",
+        "karma-coverage-istanbul-reporter": "2.1.1",
+        "karma-jasmine": "*",
+        "karma-jasmine-html": "github:jehon/jasmine-webcomponents"
+    }
+}
