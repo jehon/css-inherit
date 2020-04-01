@@ -6,18 +6,20 @@
     "repository": "https://github.com/jehon/css-inherit",
     "license": "MIT",
     "devDependencies": {
+        "eslint": "6.8.0",
         "jasmine": "3.5.0",
-        "jasmine-core": "*",
+        "jasmine-core": "3.5.0",
         "jasmine-webcomponents": "github:jehon/jasmine-webcomponents",
-        "karma": "*",
-        "karma-chrome-launcher": "*",
-        "karma-coverage": "*",
+        "karma": "4.4.1",
+        "karma-chrome-launcher": "3.1.0",
+        "karma-coverage": "2.0.1",
         "karma-coverage-istanbul-instrumenter": "1.0.2",
         "karma-coverage-istanbul-reporter": "2.1.1",
-        "karma-jasmine": "*",
+        "karma-jasmine": "3.1.1",
         "karma-jasmine-html": "github:jehon/jasmine-webcomponents"
     },
     "scripts": {
-        "test": "true"
+        "test": "karma start test/karma.conf.js --single-run",
+        "style": "eslint ."
     }
 }
