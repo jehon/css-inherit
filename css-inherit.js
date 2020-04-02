@@ -8,17 +8,19 @@ class CssInherit extends HTMLElement {
 		// Reset
 		this.innerHTML = '';
 
-		// Get the enclosing parent root
-		let root = this
-			// Enclosing parent shadow-dom
-			.getRootNode({ composed: false })
-			// Enclosing parent
-			.host
-			// The parent root
-			.getRootNode({ composed: false });
+		// Get the enclosing shadowRoot
+		const firstShadowRoot = this.getRootNode();
+
+		// Enclosing parent
+		let enclosingParent = firstShadowRoot.host;
+		if (!enclosingParent) {
+			return;
+		}
+		// The parent root (shadowRoot or document, whatever)
+		const parentShadowRoot = enclosingParent.getRootNode();
 
 		// Let's take all style / link that are not 'local'(attribute)
-		root.querySelectorAll('style:not([local]), link:not([local])').forEach(el => {
+		parentShadowRoot.querySelectorAll('style:not([local]), link:not([local])').forEach(el => {
 			const node = el.cloneNode(true);
 			// Add this inside our innerHTML
 			this.insertAdjacentElement('beforeend', node);
