@@ -44,30 +44,59 @@ describe('css-inherit', function () {
 	withHtml({
 		title: 'test', html: `
 		<div>
-			<link rel="stylesheet" type="text/css" href='/base/test/test.css' />
+		<link rel="stylesheet" type="text/css" href='/base/test/test-local.css' local />
+		<link rel="stylesheet" type="text/css" href='/base/test/test.css' />
 			<style>
-				div {
+				div.t{
 					background-color: red;
 				}
 			</style>
-			<div>outside test</div>
-			<span>outside test2</span>
+			<style local>
+				div.t {
+					color: green;
+				}
+			</style>
+			<div  class='t'>outside test</div>
+			<span class='u'>outside test2</span>
 			<x-sauron>
 				<x-css-inherit></x-css-inherit>
-				<div>inside test</div>
-				<span>inside test2</span>
+				<div  class='t'>inside test</div>
+				<span class='u'>inside test2</span>
 			</x-sauron>
 		</div>
 	`}, function (element) {
-		it('trivial', function (done) {
+		it('trivial', function () {
 			expect(true).toBeTruthy();
+		});
+
+		it('should inherit', function (done) {
 			setTimeout(() => {
 				const sauron = element().querySelector('x-sauron');
 				expect(sauron.e('div')).not.toBeNull();
 				expect(sauron.e('span')).not.toBeNull();
 
+				// On root element
+				expect(c(element().querySelector('div')).backgroundColor).toBe('rgb(255, 0, 0)');
+				expect(c(element().querySelector('span')).backgroundColor).toBe('rgb(0, 128, 0)');
+
+				// Inside shadowRoot
 				expect(c(sauron.e('div')).backgroundColor).toBe('rgb(255, 0, 0)');
 				expect(c(sauron.e('span')).backgroundColor).toBe('rgb(0, 128, 0)');
+				done();
+			}, 100)
+		});
+
+		it('should not inherit tagged "local"', function (done) {
+			setTimeout(() => {
+				const sauron = element().querySelector('x-sauron');
+
+				// On root element
+				expect(c(element().querySelector('div')).color).toBe('rgb(0, 128, 0)');
+				expect(c(element().querySelector('span')).color).toBe('rgb(138, 43, 226)');
+
+				// Inside shadowRoot: not inherited
+				expect(c(sauron.e('div')).color).toBe('rgb(0, 0, 0)');
+				expect(c(sauron.e('span')).color).toBe('rgb(0, 0, 0)');
 				done();
 			}, 100)
 		});
