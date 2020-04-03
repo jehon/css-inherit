@@ -1,4 +1,6 @@
 
+/* global withHtml */
+
 class XSauron extends HTMLElement {
 	// One Ring to *bring them all* and in the darkness bind them
 	// In the Land of Mordor where the *Shadows* lie
@@ -83,7 +85,7 @@ describe('css-inherit', function () {
 				expect(c(sauron.e('div')).backgroundColor).toBe('rgb(255, 0, 0)');
 				expect(c(sauron.e('span')).backgroundColor).toBe('rgb(0, 128, 0)');
 				done();
-			}, 100)
+			}, 100);
 		});
 
 		it('should not inherit tagged "local"', function (done) {
@@ -98,7 +100,7 @@ describe('css-inherit', function () {
 				expect(c(sauron.e('div')).color).toBe('rgb(0, 0, 0)');
 				expect(c(sauron.e('span')).color).toBe('rgb(0, 0, 0)');
 				done();
-			}, 100)
+			}, 100);
 		});
-	})
+	});
 });
