@@ -28,4 +28,4 @@ class CssInherit extends HTMLElement {
 	}
 }
 
-customElements.define('x-css-inherit', CssInherit);
+customElements.define('css-inherit', CssInherit);

@@ -61,7 +61,7 @@ describe('css-inherit', function () {
 			<div  class='t'>outside test</div>
 			<span class='u'>outside test2</span>
 			<x-sauron>
-				<x-css-inherit></x-css-inherit>
+				<css-inherit></css-inherit>
 				<div  class='t'>inside test</div>
 				<span class='u'>inside test2</span>
 			</x-sauron>
