@@ -20,7 +20,7 @@ class CssInherit extends HTMLElement {
 		const parentShadowRoot = enclosingParent.getRootNode();
 
 		// Let's take all style / link that are not 'local'(attribute)
-		parentShadowRoot.querySelectorAll('style:not([local]), link:not([local])').forEach(el => {
+		parentShadowRoot.querySelectorAll('style:not([css-inherit-local]), link:not([css-inherit-local])').forEach(el => {
 			const node = el.cloneNode(true);
 			// Add this inside our innerHTML
 			this.insertAdjacentElement('beforeend', node);

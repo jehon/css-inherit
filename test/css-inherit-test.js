@@ -46,14 +46,14 @@ describe('css-inherit', function () {
 	withHtml({
 		title: 'test', html: `
 		<div>
-		<link rel="stylesheet" type="text/css" href='/base/test/test-local.css' local />
+		<link rel="stylesheet" type="text/css" href='/base/test/test-local.css' css-inherit-local />
 		<link rel="stylesheet" type="text/css" href='/base/test/test.css' />
 			<style>
 				div.t{
 					background-color: red;
 				}
 			</style>
-			<style local>
+			<style css-inherit-local>
 				div.t {
 					color: green;
 				}
