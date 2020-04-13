@@ -12,7 +12,7 @@
         "jasmine-webcomponents": "github:jehon/jasmine-webcomponents",
         "karma": "5.0.1",
         "karma-chrome-launcher": "3.1.0",
-        "karma-coverage": "2.0.1",
+        "karma-coverage": "2.0.2",
         "karma-coverage-istanbul-instrumenter": "1.0.2",
         "karma-coverage-istanbul-reporter": "2.1.1",
         "karma-jasmine": "3.1.1",
