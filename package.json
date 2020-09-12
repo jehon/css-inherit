@@ -6,7 +6,7 @@
     "repository": "https://github.com/jehon/css-inherit",
     "license": "MIT",
     "devDependencies": {
-        "eslint": "7.8.1",
+        "eslint": "7.9.0",
         "jasmine": "3.6.1",
         "jasmine-core": "3.6.0",
         "jasmine-webcomponents": "github:jehon/jasmine-webcomponents",
