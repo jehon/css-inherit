@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    dockerfile {
+      dir: "."
+      filename: ".devcontainers/Dockerfile"  
+    }
+  }
   options {
     ansiColor('xterm')
     skipStagesAfterUnstable()
@@ -21,7 +26,7 @@ pipeline {
         branch 'main'
       }
       steps {
-
+        echo "Should release"
       }
     }
   }
