@@ -1,0 +1,14 @@
+{
+	"name": "Node.js",
+	"runArgs": [
+		"--init"
+	],
+	"build": {
+		"dockerfile": "Dockerfile",
+	},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"dbaeumer.vscode-eslint"
+	],
+	"postCreateCommand": "npm install || true"
+}

@@ -16,10 +16,13 @@ pipeline {
         sh 'npm run test'
       }
     }
-    // stage('Deploy') {
-    //   when {
-    //     branch 'master'
-    //   }
-    // }
+    stage('Deploy') {
+      when {
+        branch 'main'
+      }
+      steps {
+
+      }
+    }
   }
 }
