@@ -30,10 +30,14 @@ module.exports = function (config) {
 
 		autoWatch: true,
 
-		browsers: [
-			'ChromeHeadless'
-		],
+		browsers: ['ChromeHeadlessNoSandbox'],
 
+		customLaunchers: {
+			ChromeHeadlessNoSandbox: {
+				base: 'ChromeHeadless',
+				flags: ['--no-sandbox']
+			}
+		},
 		preprocessors: {
 			'css-inherit.js': ['karma-coverage-istanbul-instrumenter'],
 		},
