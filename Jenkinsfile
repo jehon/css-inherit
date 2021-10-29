@@ -2,7 +2,7 @@ pipeline {
   agent {
     dockerfile {
       dir "."
-      filename ".devcontainers/Dockerfile"  
+      filename ".devcontainer/Dockerfile"  
     }
   }
   options {
