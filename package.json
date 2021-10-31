@@ -1,9 +1,8 @@
 {
-    "name": "css-inherit",
-    "private": true,
-    "version": "1.0.0",
+    "name": "jh-css-inherit",
+    "version": "0.1.0",
     "description": "Inherit from parent into shadow DOM",
-    "repository": "https://github.com/jehon/css-inherit",
+    "repository": "https://github.com/jehon/jh-css-inherit",
     "license": "MIT",
     "devDependencies": {
         "eslint": "8.1.0",
