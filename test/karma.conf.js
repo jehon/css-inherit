@@ -23,7 +23,7 @@ module.exports = function (config) {
 		],
 
 		files: [
-			{ pattern: 'css-inherit.js' },
+			{ pattern: 'jehon-css-inherit.js' },
 			{ pattern: 'test/*-test.js' },
 			{ pattern: '**/*', included: false, watched: false },
 		],
@@ -39,7 +39,7 @@ module.exports = function (config) {
 			}
 		},
 		preprocessors: {
-			'css-inherit.js': ['karma-coverage-istanbul-instrumenter'],
+			'jehon-css-inherit.js': ['karma-coverage-istanbul-instrumenter'],
 		},
 
 		coverageIstanbulReporter: {

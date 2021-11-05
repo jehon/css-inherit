@@ -20,7 +20,7 @@ class CssInherit extends HTMLElement {
 		const parentShadowRoot = enclosingParent.getRootNode();
 
 		// Let's take all style / link that are not 'local'(attribute)
-		parentShadowRoot.querySelectorAll('style:not([css-inherit-local]), link:not([css-inherit-local])').forEach(el => {
+		parentShadowRoot.querySelectorAll('style:not([jehon-css-inherit-local]), link:not([jehon-css-inherit-local])').forEach(el => {
 			const node = el.cloneNode(true);
 			// Add this inside our innerHTML
 			this.insertAdjacentElement('beforeend', node);
@@ -28,4 +28,4 @@ class CssInherit extends HTMLElement {
 	}
 }
 
-customElements.define('css-inherit', CssInherit);
+customElements.define('jehon-css-inherit', CssInherit);

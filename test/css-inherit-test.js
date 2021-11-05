@@ -38,7 +38,7 @@ function sauron(element) {
 	return element.querySelector('x-sauron');
 }
 
-describe('css-inherit', function () {
+describe('jehon-css-inherit', function () {
 	it('trivial', function () {
 		expect(true).toBeTruthy();
 	});
@@ -46,14 +46,14 @@ describe('css-inherit', function () {
 	withHtml({
 		title: 'test', html: `
 		<div>
-		<link rel="stylesheet" type="text/css" href='/base/test/test-local.css' css-inherit-local />
+		<link rel="stylesheet" type="text/css" href='/base/test/test-local.css' jehon-css-inherit-local />
 		<link rel="stylesheet" type="text/css" href='/base/test/test.css' />
 			<style>
 				div.t{
 					background-color: red;
 				}
 			</style>
-			<style css-inherit-local>
+			<style jehon-css-inherit-local>
 				div.t {
 					color: green;
 				}
@@ -61,7 +61,7 @@ describe('css-inherit', function () {
 			<div  class='t'>outside test</div>
 			<span class='u'>outside test2</span>
 			<x-sauron>
-				<css-inherit></css-inherit>
+				<jehon-css-inherit></jehon-css-inherit>
 				<div  class='t'>inside test</div>
 				<span class='u'>inside test2</span>
 			</x-sauron>
