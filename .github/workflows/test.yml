@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [ 16.x, 17.x ]
+        node-version: [ lts, 16, 17 ]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -24,7 +24,9 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
+        # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#check-latest-version
         node-version: ${{ matrix.node-version }}
+        check-latest: true
         cache: 'npm'
     - run: npm ci
     - run: npm test
