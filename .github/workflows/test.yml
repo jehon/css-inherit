@@ -10,7 +10,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  ga-test:
 
     runs-on: ubuntu-latest
 
