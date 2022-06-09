@@ -4,16 +4,14 @@
 		"--init"
 	],
 	"build": {
-		"dockerfile": "Dockerfile",
+		"dockerfile": "../Dockerfile",
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"dbaeumer.vscode-eslint",
-		"takumii.markdowntable",
-		"secanis.jenkinsfile-support",
 		"gruntfuggly.todo-tree",
 		"nobuhito.printcode",
-		"ms-azuretools.vscode-docker"
+		"meganrogge.template-string-converter"
 	],
 	"postCreateCommand": "npm install || true"
 }
