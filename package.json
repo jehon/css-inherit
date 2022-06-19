@@ -6,7 +6,7 @@
     "license": "MIT",
     "devDependencies": {
         "eslint": "8.18.0",
-        "jasmine": "4.2.0",
+        "jasmine": "4.2.1",
         "jasmine-core": "4.2.0",
         "jasmine-webcomponents": "github:jehon/jasmine-webcomponents",
         "karma": "6.4.0",
