@@ -32,6 +32,7 @@ jobs:
         check-latest: true
         cache: 'npm'
 
+    - run: node --version
     - run: npm ci
     - run: npm test
     - run: npm lint
