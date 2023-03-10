@@ -4,6 +4,10 @@
     "description": "Inherit from parent into shadow DOM",
     "repository": "https://github.com/jehon/css-inherit",
     "license": "MIT",
+    "type": "module",
+    "publishConfig": {
+        "access": "public"
+    },
     "devDependencies": {
         "eslint": "8.35.0",
         "jasmine": "4.5.0",
@@ -15,12 +19,14 @@
         "karma-coverage-istanbul-instrumenter": "1.0.4",
         "karma-coverage-istanbul-reporter": "3.0.3",
         "karma-jasmine": "5.1.0",
-        "karma-jasmine-html": "github:jehon/jasmine-webcomponents"
+        "karma-jasmine-html": "github:jehon/jasmine-webcomponents",
+        "prettier": "^2.8.4",
+        "semantic-release": "20.1.1"
     },
     "scripts": {
-        "test": "karma start test/karma.conf.js --single-run",
-        "test-continuously": "karma start test/karma.conf.js",
-        "style": "eslint .",
-        "publish": "npm publish --access public"
+        "test": "karma start test/karma.conf.cjs --single-run",
+        "test-continuously": "karma start test/karma.conf.cjs",
+        "style": "eslint . && prettier -l ./*.js test/*",
+        "publish": "semantic-release"
     }
 }
