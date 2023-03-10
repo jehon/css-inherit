@@ -33,6 +33,8 @@ jobs:
         cache: 'npm'
 
     - run: node --version
+    - run: |
+        echo "Node (${{ matrix.node-version }}): $(node --version)" >> $GITHUB_STEP_SUMMARY
     - run: npm ci
     - run: npm test
     - run: npm run lint
