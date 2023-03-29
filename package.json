@@ -9,7 +9,7 @@
         "access": "public"
     },
     "devDependencies": {
-        "eslint": "8.36.0",
+        "eslint": "8.37.0",
         "jasmine": "4.6.0",
         "jasmine-core": "4.6.0",
         "jasmine-webcomponents": "github:jehon/jasmine-webcomponents",
