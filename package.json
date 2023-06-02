@@ -21,7 +21,7 @@
         "karma-jasmine": "5.1.0",
         "karma-jasmine-html": "github:jehon/jasmine-webcomponents",
         "prettier": "^2.8.4",
-        "semantic-release": "21.0.2"
+        "semantic-release": "21.0.3"
     },
     "scripts": {
         "test": "karma start test/karma.conf.cjs --single-run",
