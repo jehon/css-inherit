@@ -63,7 +63,7 @@ describe("jehon-css-inherit", function () {
 				<span class='u'>inside test2</span>
 			</x-sauron>
 		</div>
-	`,
+	`
     },
     function (element) {
       it("trivial", function () {

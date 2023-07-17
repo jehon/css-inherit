@@ -3,38 +3,37 @@ name: Node
 on:
   push:
     branches:
-    - main
-    - ci/**
+      - main
+      - ci/**
   pull_request:
     branches:
-    - main
+      - main
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: "0 0 * * *"
 
 jobs:
   ga-test:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [ "lts/*", "latest" ]
+        node-version: ["lts/*", "latest"]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#check-latest-version
-        node-version: ${{ matrix.node-version }}
-        check-latest: true
-        cache: 'npm'
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          # https://github.com/actions/setup-node/blob/main/docs/advanced-usage.md#check-latest-version
+          node-version: ${{ matrix.node-version }}
+          check-latest: true
+          cache: "npm"
 
-    - run: node --version
-    - run: |
-        echo "Node (${{ matrix.node-version }}): $(node --version)" >> $GITHUB_STEP_SUMMARY
-    - run: npm ci
-    - run: npm test
-    - run: npm run lint
+      - run: node --version
+      - run: |
+          echo "Node (${{ matrix.node-version }}): $(node --version)" >> $GITHUB_STEP_SUMMARY
+      - run: npm ci
+      - run: npm test
+      - run: npm run lint

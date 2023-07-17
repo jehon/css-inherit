@@ -1,13 +1,21 @@
 {
-    "todo-tree.general.tags": [
-        "BUG",
-        "HACK",
-        "FIXME",
-        "TODO",
-        "XXX",
-        "xit",
-        "xdescribe",
-        "[ ]",
-        "[x]"
-    ]
+  "todo-tree.general.tags": [
+    "BUG",
+    "HACK",
+    "FIXME",
+    "TODO",
+    "XXX",
+    "xit",
+    "xdescribe",
+    "[ ]",
+    "[x]"
+  ],
+  "github-actions.workflows.pinned.workflows": [
+    ".github/workflows/test.yml"
+  ],
+  "editor.formatOnSave": true,
+  "prettier.documentSelectors": ["*.js", "*.css", "*.html", "*.ts"],
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

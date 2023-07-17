@@ -20,13 +20,13 @@
         "karma-coverage-istanbul-reporter": "3.0.3",
         "karma-jasmine": "5.1.0",
         "karma-jasmine-html": "github:jehon/jasmine-webcomponents",
-        "prettier": "^2.8.4",
+        "prettier": "3.0.0",
         "semantic-release": "21.0.7"
     },
     "scripts": {
         "test": "karma start test/karma.conf.cjs --single-run",
         "test-continuously": "karma start test/karma.conf.cjs",
-        "lint": "eslint . && prettier -l ./*.js test/*",
+        "lint": "eslint . && prettier --check ./*.js test/*",
         "publish": "semantic-release"
     }
 }

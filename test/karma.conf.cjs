@@ -19,7 +19,7 @@ module.exports = function (config) {
     files: [
       { pattern: "jehon-css-inherit.js" },
       { pattern: "test/*-test.js" },
-      { pattern: "**/*", included: false, watched: false },
+      { pattern: "**/*", included: false, watched: false }
     ],
 
     autoWatch: true,
@@ -29,17 +29,17 @@ module.exports = function (config) {
     customLaunchers: {
       ChromeHeadlessNoSandbox: {
         base: "ChromeHeadless",
-        flags: ["--no-sandbox"],
-      },
+        flags: ["--no-sandbox"]
+      }
     },
     preprocessors: {
-      "jehon-css-inherit.js": ["karma-coverage-istanbul-instrumenter"],
+      "jehon-css-inherit.js": ["karma-coverage-istanbul-instrumenter"]
     },
 
     coverageIstanbulReporter: {
       reports: ["html", "text"],
-      dir: path.join(root, "tmp/coverage"),
-    },
+      dir: path.join(root, "tmp/coverage")
+    }
   };
 
   config.set(configuration);
