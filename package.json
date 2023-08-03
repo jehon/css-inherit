@@ -21,7 +21,7 @@
         "karma-coverage-istanbul-reporter": "3.0.3",
         "karma-jasmine": "5.1.0",
         "karma-jasmine-html": "github:jehon/jasmine-webcomponents",
-        "prettier": "3.0.0",
+        "prettier": "3.0.1",
         "semantic-release": "21.0.7"
     },
     "scripts": {
