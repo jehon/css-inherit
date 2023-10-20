@@ -10,7 +10,7 @@
     },
     "browser": "jehon-css-inherit.js",
     "devDependencies": {
-        "eslint": "8.51.0",
+        "eslint": "8.52.0",
         "jasmine": "5.1.0",
         "jasmine-core": "5.1.1",
         "jasmine-webcomponents": "github:jehon/jasmine-webcomponents",
